@@ -2,14 +2,20 @@
   <main aria-role="main">
     <header class="homepage-header d-flex flex-column flex-md-row">
       <div class="box left-box h-25vh">
-        <h1>{{.Title}}</h1>
+        <h1 class="fs-1 text-uppercase">{{.Title}}</h1>
         {{ with .Params.subtitle }}
         <span class="subtitle">{{.}}</span>
         {{ end }}
+        <div class="links mt-4">
+          <a href="https://twitter.com/CZAzuaga" target="_blank" link="noreferrer">Twitter: @CZAZUAGA</a>
+          <a href="https://discordapp.com/invite/xb26HZD" target="_blank" link="noreferrer">Discord</a>
+        </div>
       </div>
-      <div class="box right-box h-25vh">
-        <a href="https://twitter.com/CZAzuaga" target="_blank" link="noreferrer">Twitter: @CZAZUAGA</a>
-        <a href="https://discordapp.com/invite/xb26HZD" target="_blank" link="noreferrer">Discord</a>
+      <div class="box right-box h-25vh p-3">
+        <a class="twitter-timeline"
+          href="https://twitter.com/CZAzuaga?ref_src=twsrc%5Etfw"
+          data-height="450"
+          data-theme="dark">Tweets by CZAzuaga</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
     </header>
     <div class="homepage-content">
