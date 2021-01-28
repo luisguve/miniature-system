@@ -2,18 +2,53 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ block "title" . }}
-      <!-- Blocks may include default content. -->
-      {{ .Site.Title }}
-    {{ end }}</title>
+    <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href={{"plugins/slick/slick.css" | absURL}}/>
+    <link rel="stylesheet" type="text/css" href={{"plugins/slick/slick-theme.css" | absURL}}/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href={{"css/styles.css" | absURL }}>
   </head>
   <body>
-    <!-- Code that all your templates share, like a header -->
-    {{ block "main" . }}
-      <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
-    {{ block "footer" . }}
-    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
-    {{ end }}
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+      <div class="container-lg">
+        <a href="/#"><img src={{"img/squidbit_8bit_logo_pink_high-export.png" | absURL }} alt="logo" height="30"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-md-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/lords-of-exile#">Lords of Exile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/chameleapp#">ChameleApp</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {{ block "main" . }} {{/* No default main */}} {{ end }}
+
+    <footer>
+      &copy; 2021 Squidbit Works is a brand by <a href="https://twitter.com/CZAzuaga" target="_blank" link="noreferrer">CZAZUAGA</a> All Rights Reserved.
+    </footer>
+
+    <!-- Bootstrap -->
+    <script type="text/javascript" src={{"plugins/bootstrap-5.0.0-beta1-dist/js/bootstrap.js" | absURL }}></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src={{"plugins/jquery/jquery-3.5.1.js" | absURL }}></script>
+    <script type="text/javascript" src={{"plugins/jquery/jquery-migrate-1.4.1.js" | absURL }}></script>
+    <!-- Slick -->
+    <script type="text/javascript" src={{"plugins/slick/slick.js" | absURL }}></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src={{"js/script.js" | absURL }}></script>
   </body>
 </html>
