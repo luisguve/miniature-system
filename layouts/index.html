@@ -1,18 +1,19 @@
 {{ define "main" }}
   <main aria-role="main">
-    <header class="homepage-header">
-      <h1>{{.Title}}</h1>
-      {{ with .Params.subtitle }}
-      <span class="subtitle">{{.}}</span>
-      {{ end }}
+    <header class="homepage-header d-flex flex-column flex-md-row">
+      <div class="box left-box h-25vh">
+        <h1>{{.Title}}</h1>
+        {{ with .Params.subtitle }}
+        <span class="subtitle">{{.}}</span>
+        {{ end }}
+      </div>
+      <div class="box right-box h-25vh">
+        <a href="https://twitter.com/CZAzuaga" target="_blank" link="noreferrer">Twitter: @CZAZUAGA</a>
+        <a href="https://discordapp.com/invite/xb26HZD" target="_blank" link="noreferrer">Discord</a>
+      </div>
     </header>
     <div class="homepage-content">
       {{.Content}}
-    </div>
-    <div>
-      {{ range first 10 .Site.RegularPages }}
-          {{ .Render "summary"}}
-      {{ end }}
     </div>
   </main>
 {{ end }}
