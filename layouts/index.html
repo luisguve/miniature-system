@@ -15,22 +15,75 @@
         {{/*<a class="twitter-timeline"
           href="https://twitter.com/CZAzuaga?ref_src=twsrc%5Etfw"
           data-height="450"
-          data-theme="dark">Loading latest tweets...</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}}
+          data-theme="dark">Loading latest tweets...</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>*/}}
       </div>
     </header>
     <div class="homepage-content">
       <div class="container lords-of-exile py-4 text-light">
-        <div class="row">
+        <div class="row my-5">
           <div class="col-12">
             <h1 class="d-flex align-items-center justify-content-center text-light">Lords of Exile {{if not .Params.loe.launched}}<span class="ms-2 coming-soon">coming soon</span>{{end}}</h1>
-            <div class="row flex-md-row-reverse justify-content-center align-items-center">
-              <div class="col-7 col-md-4 gif">
-                <img class="img-fluid" src="img/lords_of_exile/sprGabrielBloodQuake1-1.png">
-              </div>
-              <div class="col-12 col-md-8">
-                <p>{{.Params.loe.desc}} <a href="{{.Params.loe.link}}">View more</a></p>
+            <div class="row content pt-4">
+              <div class="col-12 col-lg-7">
+                <div class="text-center">
+                  <div class="gif d-inline-block float-none float-md-end">
+                    <img class="img-fluid" src="{{.Params.loe.thumbnail}}">
+                  </div>
+                  <p class="text-start mt-2 mt-md-0">{{.Params.loe.desc}} <a class="text-info" href="{{.Params.loe.link}}">View more</a></p>
+                </div>
+                <h5>For all the information for press, see the press kit</h5>
                 <a class="a-btn" href="{{.Params.loe.pressKitLink}}">Press kit</a>
               </div>
+              <div class="col-12 col-lg-5 my-4 my-md-0">
+                <h2 class="text-center">Latest posts</h2>
+                {{ range where (where .Site.Pages "Section" "lords-of-exile") ".IsSection" "!=" true }}
+                  <a class="text-info" href="{{.Permalink}}">{{.Title}} - {{.PublishDate.Format "January 2, 2006"}}</a>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row my-5">
+          <div class="col-12">
+            <h1 class="d-flex align-items-center justify-content-center text-light">ChameleApp</h1>
+            <div class="row content justify-content-center align-items-center">
+              <div class="col-12 text-center">
+                <p>{{.Params.chameleApp.desc}} <a class="view-more" href="{{.Params.chameleApp.link}}">View more</a></p>
+              </div>
+              <div class="col-12 text-center">
+                <img class="img-fluid" src="{{.Params.chameleApp.thumbnail}}">
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row my-5">
+          <div class="col-12">
+            <h1 class="text-center my-3">About us</h1>
+            <p>{{.Content}}</p>
+          </div>
+        </div>
+        <hr />
+        <div class="row my-5">
+          <div class="col-12">
+            <h1 class="d-flex align-items-center justify-content-center text-light my-3">The team</h1>
+            <div class="row justify-content-around">
+            {{ range .Params.team }}
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card w-100 bg-secondary">
+                  <div class="text-center">
+                    <img src="{{.pic}}" class="card-img-top bg-transparent" alt="{{.name}}" style="max-width: 160px;">
+                  </div>
+                  <div class="card-body bg-dark text-light">
+                    <h5 class="card-title text-center">{{.name}}</h5>
+                    <p class="text-center mb-1"><em>{{.role}}</em></p>
+                    <p class="card-text">{{.desc}}</p>
+                    <a href="{{.twitterLink}}" class="btn btn-primary">{{.twitterDesc}}</a>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
             </div>
           </div>
         </div>
