@@ -18,6 +18,10 @@
 	min-width: 0;
 }
 
+hr {
+  background: white;
+}
+
 body {
   background: url("/img/lords_of_exile/page_bg_generated_v6b.jpg");
   background-size: cover;
@@ -80,7 +84,6 @@ body {
 
 .homepage-content .coming-soon {
   font-size: 16px;
-  /*border: 2px solid green;*/
   background: green;
   padding: 5px;
   padding-top: 2px;
@@ -97,12 +100,16 @@ body {
   color: navy;
   background: orange;
   text-decoration: none;
-  padding: 2px 10px;
+  padding: 5px 15px;
 }
 
 .a-btn:hover {
   background: #825503;
   color: white;
+}
+
+a.view-more {
+  color: lightblue;
 }
 
 @media screen and (min-width: 768px) {
