@@ -80,9 +80,29 @@ body {
 
 .homepage-content .coming-soon {
   font-size: 16px;
-  border: 2px solid green;
+  /*border: 2px solid green;*/
+  background: green;
   padding: 5px;
   padding-top: 2px;
+}
+
+.lords-of-exile .gif {
+  /*border-radius: 50%;*/
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #004765 0%, #004765 50%, rgba(255,255,255,0.2) 50%, rgba(125,0,0,0) 58%);
+}
+
+.a-btn {
+  color: navy;
+  background: orange;
+  text-decoration: none;
+  padding: 2px 10px;
+}
+
+.a-btn:hover {
+  background: #825503;
+  color: white;
 }
 
 @media screen and (min-width: 768px) {
