@@ -78,6 +78,13 @@ body {
   color: navy;
 }
 
+.homepage-content .coming-soon {
+  font-size: 16px;
+  border: 2px solid green;
+  padding: 5px;
+  padding-top: 2px;
+}
+
 @media screen and (min-width: 768px) {
   .homepage-header {
     min-height: 50vh;
