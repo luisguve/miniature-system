@@ -89,6 +89,15 @@ body {
   padding-top: 2px;
 }
 
+.lords-of-exile a.title {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.lords-of-exile a.title:hover {
+  color: lightgray;
+}
+
 .lords-of-exile .gif {
   /*border-radius: 50%;*/
   width: 200px;
