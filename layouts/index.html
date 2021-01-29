@@ -12,16 +12,28 @@
         </div>
       </div>
       <div class="box right-box h-25vh p-3">
-        {{/*
-        <a class="twitter-timeline"
+        {{/*<a class="twitter-timeline"
           href="https://twitter.com/CZAzuaga?ref_src=twsrc%5Etfw"
           data-height="450"
-          data-theme="dark">Tweets by CZAzuaga</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}}
+          data-theme="dark">Loading latest tweets...</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}}
       </div>
     </header>
     <div class="homepage-content">
-      <div class="lords-of-exile py-4">
-        <h1 class="d-flex align-items-center justify-content-center text-light">Lords of Exile {{if not .Params.loe.launched}}<span class="ms-2 coming-soon">coming soon</span>{{end}}</h1>
+      <div class="container lords-of-exile py-4 text-light">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="d-flex align-items-center justify-content-center text-light">Lords of Exile {{if not .Params.loe.launched}}<span class="ms-2 coming-soon">coming soon</span>{{end}}</h1>
+            <div class="row flex-md-row-reverse justify-content-center align-items-center">
+              <div class="col-7 col-md-4 gif">
+                <img class="img-fluid" src="img/lords_of_exile/sprGabrielBloodQuake1-1.png">
+              </div>
+              <div class="col-12 col-md-8">
+                <p>{{.Params.loe.desc}} <a href="{{.Params.loe.link}}">View more</a></p>
+                <a class="a-btn" href="{{.Params.loe.pressKitLink}}">Press kit</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
