@@ -12,14 +12,17 @@
         </div>
       </div>
       <div class="box right-box h-25vh p-3">
+        {{/*
         <a class="twitter-timeline"
           href="https://twitter.com/CZAzuaga?ref_src=twsrc%5Etfw"
           data-height="450"
-          data-theme="dark">Tweets by CZAzuaga</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          data-theme="dark">Tweets by CZAzuaga</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}}
       </div>
     </header>
     <div class="homepage-content">
-      {{.Content}}
+      <div class="lords-of-exile py-4">
+        <h1 class="d-flex align-items-center justify-content-center text-light">Lords of Exile {{if not .Params.loe.launched}}<span class="ms-2 coming-soon">coming soon</span>{{end}}</h1>
+      </div>
     </div>
   </main>
 {{ end }}
