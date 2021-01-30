@@ -1,3 +1,20 @@
 {{ define "main" }}
-
+  <main aria-role="main" class="text-light loe-container">
+    <header class="d-flex justify-content-center align-items-center">
+    </header>
+    <div class="content container my-4">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center">{{.Params.Title}}</h1>
+        </div>
+      </div>
+    </div>
+  </main>
 {{ end }}
+
+{{/*
+{{ range .Pages }}
+  <p>{{.Title}}</p>
+{{ end }}
+
+*/}}
