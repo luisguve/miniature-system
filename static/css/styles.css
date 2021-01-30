@@ -121,10 +121,16 @@ a.view-more {
   color: lightblue;
 }
 
+.loe-container header {
+  height: 55vw;
+  background: url(/img/lords_of_exile/cover.png);
+  background-size: cover;
+  background-position: center top;
+}
+
 @media screen and (min-width: 768px) {
   .homepage-header {
     min-height: 50vh;
-    /*background: linear-gradient(to right, var(--home-header-color-1), var(--home-header-color-2));*/
   }
   .homepage-header .left-box {
     clip-path: polygon(
