@@ -5,7 +5,35 @@
     <div class="content container my-4">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-center">{{.Params.Title}}</h1>
+          <h1 class="d-flex align-items-center justify-content-center mt-3 mb-4">{{.Params.Title}}{{if not .Params.launched}}<span class="ms-2 coming-soon">coming soon</span>{{end}}</h1>
+          <!-- Carousel -->
+          <div class="row justify-content-center mb-2">
+            <div class="col-12 col-md-10 p-0">
+              <div class="row m-0 main-slider w-100">
+                <div class="iframe-container">
+                  <iframe src="{{.Params.youtube }}" allowfullscreen></iframe>
+                </div>
+                {{ range .Params.slides }}
+                  <img src="{{.screenshot}}" class="img-fluid w-100">
+                {{ end }}
+              </div>
+            </div>
+          </div>
+          <!-- Carousel navigation -->
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 p-0">
+              <div class="row justify-content-between slider-nav-container w-100 m-0">
+                <button class="col-1 prev-button btn btn-dark" aria-label="Previous" type="button" style="display: block;"><i class="bi-caret-left-fill d-flex align-items-center justify-content-center fs-3 fs-lg-2"></i></button>
+                <div class="col-10 slider-nav px-0">
+                  <img src="{{.Params.youtube_miniature}}" class="img-fluid px-1">
+                  {{ range .Params.slides }}
+                  <img src="{{.screenshot}}" class="img-fluid px-1">
+                  {{ end }}
+                </div>
+                <button class="col-1 next-button btn btn-dark" aria-label="Next" type="button" style="display: block;"><i class="bi-caret-right-fill d-flex align-items-center justify-content-center fs-3 fs-lg-2"></i></button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
