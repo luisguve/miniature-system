@@ -18,11 +18,12 @@ slides:
 wishlist: "https://store.steampowered.com/app/1329360/Lords_of_Exile/"
 features:
   - title: "A hostile and dangerous world"
-    screenshot: "/img/lords-of-exile/sample-4.gif"
-    desc: "Survive the cruelty of a dark land dominated by the fearsome creatures of the shadows.
-    You must make your way through hordes of enemies, traps, and dangers while facing the powerful servants of Galagar at the end of each zone, in order to reach the heart of Exilia and be able to consummate your revenge."
+    screenshots:
+      - "/img/lords_of_exile/sample-4.gif"
+    desc: "Survive the cruelty of a dark land dominated by the fearsome creatures of the shadows.<br />You must make your way through hordes of enemies, traps, and dangers while facing the powerful servants of Galagar at the end of each zone, in order to reach the heart of Exilia and be able to consummate your revenge."
   - title: "A tribute to the classic arcades"
-    screenshot: "/img/lords-of-exile/sample-2.gif"
+    screenshots:
+      - "/img/lords_of_exile/sample-2.gif"
     items:
       - "16-bit physics that provides a real retro feel."
       - "Lords of Exile is not another Metroidvania, it is a true tribute to the most respected classic games of the late 80s and early 90s!."
@@ -30,7 +31,8 @@ features:
       - "The game feel, the arcade gameplay or the care and detailed 8-bit pixel art with Japanese anime style are undoubtedly some of the reasons that have made Lords of Exile stand out from a large number of games since the first moment it was showed to the world through of Twitter."
       - "The epic 16-bit OST created with the Megadrive sound chip and anime touches will remind the great Japanese action games of the console."
   - title: "Gameplay features"
-    screenshot: "/img/lords-of-exile/sample-6.gif"
+    screenshots:
+      - "/img/lords_of_exile/sample-6.gif"
     items:
       - "Range the 8 full of action and dangers levels in a perfect classic linear design and defeat the powerful end-of-zone bosses."
       - "Powerful throwing weapons and melee combat, jump and vertical attack, climb through some areas, dashing to dodge the enemy attacks or collect valuable items in the purest arcade style are some of the Gabriel abilities."
