@@ -82,7 +82,7 @@ body {
   color: navy;
 }
 
-.homepage-content .coming-soon {
+span.coming-soon {
   font-size: 16px;
   background: green;
   padding: 5px;
@@ -126,6 +126,43 @@ a.view-more {
   background: url(/img/lords_of_exile/cover.png);
   background-size: cover;
   background-position: center top;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-slider .slick-list {padding: 0;}
+
+.slider-nav .slick-slide {
+  height: 100%;
+  padding: 10px;
+  background: var(--dark-background);
+}
+
+.slider-nav .slick-current {
+  background: white;
+}
+
+.slider-nav .slick-active:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 991px) {
+  .slider-nav .slick-slide {
+    padding: 10px 4px;
+  }
 }
 
 @media screen and (min-width: 768px) {
