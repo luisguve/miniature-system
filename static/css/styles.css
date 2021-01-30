@@ -159,6 +159,10 @@ a.view-more {
   opacity: 0.5;
 }
 
+.feature:nth-child(even) {
+  flex-direction: row;
+}
+
 @media screen and (max-width: 991px) {
   .slider-nav .slick-slide {
     padding: 10px 4px;
@@ -180,5 +184,8 @@ a.view-more {
   .homepage-header .box {
     width: 50%;
     min-height: auto;
+  }
+  .feature:nth-child(even) {
+    flex-direction: row-reverse;
   }
 }
