@@ -3,7 +3,7 @@
     <header class="d-flex justify-content-center align-items-center">
     </header>
     <div class="content container my-4">
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-12">
           <h1 class="d-flex align-items-center justify-content-center mt-3 mb-4">{{.Params.Title}}{{if not .Params.launched}}<span class="ms-2 coming-soon">coming soon</span>{{end}}</h1>
           <!-- Carousel -->
@@ -34,6 +34,33 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="col-12 col-md-10 my-5">
+          <p>{{.Content}}</p>
+          {{ range .Params.features }}
+          <div class="row feature my-5 align-items-center">
+            <div class="col-12">
+              <h2 class="text-center">{{.title}}</h2>
+            </div>
+            <div class="col-12 col-xl-6 pics text-center mb-1">
+              {{ range .screenshots }}
+              <img src="{{.}}" class="img-fluid">
+              {{ end }}
+            </div>
+            <div class="col-12 col-xl-6">
+              {{ with .desc }}
+              {{ . | safeHTML }}
+              {{ end }}
+              {{ if .items }}
+              <ul>
+                {{ range .items }}
+                <li>{{.}}</li>
+                {{ end }}
+              </ul>
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
         </div>
       </div>
     </div>
