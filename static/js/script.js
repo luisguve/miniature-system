@@ -6,8 +6,8 @@ $(document).ready(function(){
 		fade: true,
 		asNavFor: '.slider-nav',
 		draggable: false,
-		autoplay: true,
-		autoplaySpeed: 8000
+		autoplay: false,
+		autoplaySpeed: 2000
 	});
 	$('.slider-nav').slick({
 		slidesToShow: 4,
@@ -20,14 +20,6 @@ $(document).ready(function(){
 		nextArrow: $('.next-button'),
 		responsive: [
 			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					infinite: true
-				}
-			},
-			{
 				breakpoint: 576,
 				settings: {
 					slidesToShow: 2,
@@ -36,13 +28,5 @@ $(document).ready(function(){
 				}
 			}
 		]
-	});
-	// Set background images of slides in navigation slider.
-	const slides = document.querySelectorAll(".nav-slide");
-	slides.forEach(slide => {
-		const bgImgUrl = `url(${slide.dataset["bgImg"]})`;
-		$(slide).css("background", bgImgUrl);
-		$(slide).css("background-size", "cover");
-		$(slide).css("background-position", "center");
 	});
 });
