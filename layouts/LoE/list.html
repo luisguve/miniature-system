@@ -35,12 +35,16 @@
             </div>
           </div>
         </div>
+        <div class="col-12 col-md-9 px-0 mt-4">
+          <a href="{{.Params.wishlistLink}}"><img src="{{.Params.wishlistPic}}" class="img-fluid"></a>
+        </div>
         <div class="col-12 col-md-10 my-5">
-          <p>{{.Content}}</p>
+          <h2>Story</h2>
+          {{ .Params.story | safeHTML }}
           {{ range .Params.features }}
           <div class="row feature my-5 align-items-center">
             <div class="col-12">
-              <h2 class="text-center">{{.title}}</h2>
+              <h2>{{.title}}</h2>
             </div>
             <div class="col-12 col-xl-6 pics text-center mb-1">
               {{ range .screenshots }}
@@ -61,15 +65,15 @@
             </div>
           </div>
           {{ end }}
+          {{.Content}}
+        </div>
+        <div class="col-12 col-md-10 mb-5">
+          <h1 class="text-center">Latest posts</h1>
+          {{ range .Pages }}
+            <a href="{{.Permalink}}">{{.Title}}</a>
+          {{ end }}
         </div>
       </div>
     </div>
   </main>
 {{ end }}
-
-{{/*
-{{ range .Pages }}
-  <p>{{.Title}}</p>
-{{ end }}
-
-*/}}
