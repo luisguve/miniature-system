@@ -7,12 +7,12 @@ loe:
   thumbnail: "/img/lords_of_exile/sprGabrielBloodQuake1-1.png"
   launched: false
   desc: "Lords of Exile is an 8-bit side-scrolling action platformer set in the far lands of Exilia where a cursed knight makes his way to the revenge. During the adventure, you will take the role of Sir Gabriel, a knight who was cursed with anger after discovering that Galagar murdered his wife, he only lives to take revenge. A combination of classic retro mechanics and linear level design in 8-bit graphics!"
-  link: "/lords-of-exile"
-  pressKitLink: "/lords-of-exile#presskit"
+  link: "/lords-of-exile/"
+  pressKitLink: "/lords-of-exile/#presskit"
 chameleApp:
   thumbnail: "/img/chameleapp/sample-1.gif"
   desc: "ChameleApp is a powerful color editor for pixel art sprites and animations."
-  link: "/chameleapp"
+  link: "/chameleapp/"
 team:
   - pic: "/img/team/carlos_zazuaga.png"
     name: "Carlos Zazuaga"
