@@ -42,6 +42,19 @@ features:
       - "Powerful throwing weapons and melee combat, jump and vertical attack, climb through some areas, dashing to dodge the enemy attacks or collect valuable items in the purest arcade style are some of the Gabriel abilities."
       - "Use the 3 powers of the shadows to get their advantages and go forward on your way among the evil creatures to be able to overcome each level."
       - "A lot of more cool things!"
+reviews:
+  - content: "But while Metroidvania games are always welcome, we are admittedly lacking in games that resemble the more traditional, NES-era Castlevania games. So this right here is certainly a welcome sight, nailing down the graphics quite well while appearing to set up some satisfying boss battles. Can’t wait for the Kickstarter campaign!"
+    author:
+      name: "[Kyle LeClair](http://www.hardcoregamer.com/author/KyleLeClair/)"
+      role: "[Hardcore Gamer](https://www.hardcoregamer.com/2019/09/15/screenshot-saturday-featuring-ashers-descent-super-buckyball-tournament-more/357465/)"
+  - content: "It looks to be loaded with classic Konami Castlevania vibes in the best way, feeling like a natural continuation of what *[Bloodstained: Curse of the Moon](https://www.nintendoenthusiast.com/bloodstained-curse-of-the-moon-limited-run-games/)* began."
+    author:
+      name: "[John Friscia](https://twitter.com/JohnFriscia)"
+      role: "[Nintendo Enthusiast](https://www.nintendoenthusiast.com/lords-of-exile-is-a-new-action-sidescroller-with-awesome-castlevania-vibes/)"
+  - content: "Lords of exile is a love letter to a whole generation of 8-bit games and drink of great game classics like Castlevania, Ghost & Goblins or Black tiger. His retro aesthetic with a (very intentional) very limited palette is not an impediment to show off very expressive sprites and careful animations that fill us with tender nostalgia to those of us who are of a certain age and will surprise those younger ones with their liveliness."
+    author:
+      name: "[Raúl Vivar](https://twitter.com/raulbayushi)"
+      role: "Lead animator of [Blasphemous](http://blasphemousgame.com/)"
 ---
 
 ## Supported platforms
