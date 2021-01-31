@@ -99,10 +99,7 @@ span.coming-soon {
 }
 
 .lords-of-exile .gif {
-  /*border-radius: 50%;*/
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, #004765 0%, #004765 50%, rgba(255,255,255,0.2) 50%, rgba(125,0,0,0) 58%);
+  
 }
 
 .a-btn {
