@@ -4,7 +4,7 @@ date: 2021-01-29T14:21:38-04:00
 draft: false
 type: LoE
 launched: false
-# youtube: "https://www.youtube.com/embed/4hnGCkFJ4vU?rel=0"
+# youtube: "https://www.youtube.com/embed/4hnGCkFJ4vU?rel=0&amp;autoplay=1&amp;enablejsapi=1"
 youtube: ""
 youtube_miniature: "/img/lords_of_exile/youtube_miniature.jpg"
 slides:
