@@ -23,23 +23,26 @@
         <div class="row my-5">
           <div class="col-12">
             <h1 class="text-center"><a class="d-inline-flex align-items-center justify-content-center title" href="{{.Params.loe.link}}">{{.Params.loe.title}}{{if not .Params.loe.launched}} <span class="ms-2 coming-soon">coming soon</span>{{end}}</a></h1>
-            <div class="row content pt-4">
-              <div class="col-12 col-lg-7">
+            <div class="row pt-4 justify-content-center">
+              {{ $posts := gt (len (where .Site.Pages "Section" "lords-of-exile")) 1 }}
+              <div class="col-12 {{if $posts}}col-lg-7{{else}}col-lg-10{{end}}">
                 <div class="text-center">
                   <div class="gif d-inline-block float-none float-md-end">
                     <img class="img-fluid" src="{{.Params.loe.thumbnail}}">
                   </div>
-                  <p class="text-start mt-2 mt-md-0">{{.Params.loe.desc}} <a class="text-info" href="{{.Params.loe.link}}">View more</a></p>
+                  <p class="text-start mt-2 mt-md-0">{{.Params.loe.desc}} <a class="lightblue" href="{{.Params.loe.link}}">View more</a></p>
                 </div>
                 <h5>For all the information for press, see the press kit</h5>
-                <a class="a-btn" href="{{.Params.loe.pressKitLink}}">Press kit</a>
+                <a class="a-btn presskit" href="{{.Params.loe.pressKitLink}}">Press kit</a>
               </div>
+              {{ if $posts }}
               <div class="col-12 col-lg-5 my-4 my-md-0">
-                <h2 class="text-center">Latest posts</h2>
-                {{ range where (where .Site.Pages "Section" "lords-of-exile") ".IsSection" "!=" true }}
-                  <a class="text-info" href="{{.Permalink}}">{{.Title}} - {{.PublishDate.Format "January 2, 2006"}}</a>
-                {{ end }}
+                  <h2 class="text-center">Latest posts</h2>
+                  {{ range where (where .Site.Pages "Section" "lords-of-exile") ".IsSection" "!=" true }}
+                    <a class="lightblue" href="{{.Permalink}}">{{.Title}} - {{.PublishDate.Format "January 2, 2006"}}</a>
+                  {{ end }}
               </div>
+              {{ end }}
             </div>
           </div>
         </div>
@@ -58,7 +61,7 @@
           </div>
         </div>
         <hr />
-        <div class="row my-5">
+        <div class="row content my-5">
           <div class="col-12">
             <h1 class="text-center my-3">About us</h1>
             <p>{{.Content}}</p>
