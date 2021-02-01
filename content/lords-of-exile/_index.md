@@ -4,8 +4,8 @@ date: 2021-01-29T14:21:38-04:00
 draft: false
 type: LoE
 launched: false
-# youtube: "https://www.youtube.com/embed/4hnGCkFJ4vU?rel=0&amp;autoplay=1&amp;enablejsapi=1"
-youtube: ""
+youtube: "https://www.youtube.com/embed/4hnGCkFJ4vU?rel=0&autoplay=1&enablejsapi=1"
+#youtube: ""
 youtube_miniature: "/img/lords_of_exile/youtube_miniature.jpg"
 slides:
   - screenshot: "/img/lords_of_exile/screenshots/screenshot_1.png"
@@ -23,7 +23,7 @@ story: "<p>In the Far East, in bloody ancient times of war, creatures of the dar
 features:
   - title: "A hostile and dangerous world"
     screenshots:
-      - "/img/lords_of_exile/gifs/sample-4.gif"
+      - "/img/lords_of_exile/enemies/miniboss-1.png"
     desc: "Survive the cruelty of a dark land dominated by the fearsome creatures of the shadows.<br />You must make your way through hordes of enemies, traps, and dangers while facing the powerful servants of Galagar at the end of each zone, in order to reach the heart of Exilia and be able to consummate your revenge."
   - title: "A tribute to the classic arcades"
     screenshots:
