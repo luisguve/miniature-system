@@ -102,7 +102,7 @@ span.coming-soon {
   color: lightblue;
 }
 
-.content a:hover, a.lightblue:hover {
+.content a:hover, a.lightblue:hover, a.presskit:hover {
   color: cyan;
 }
 
