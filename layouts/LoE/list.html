@@ -11,7 +11,7 @@
             <div class="col-12 col-md-10 p-0">
               <div class="row m-0 main-slider w-100">
                 <div class="iframe-container">
-                  <iframe src="{{.Params.youtube }}" allowfullscreen></iframe>
+                  <iframe src="{{.Params.youtube }}" allowfullscreen id="player"></iframe>
                 </div>
                 {{ range .Params.slides }}
                   <img src="{{.screenshot}}" class="img-fluid w-100">
@@ -112,3 +112,77 @@
     </div>
   </main>
 {{ end }}
+
+{{ define "script" }}
+  <script>
+    // This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Create a YouTube player.
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        events: {
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+    $(document).ready(function() {
+      // Setup slick slider.
+      $('.main-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav',
+        draggable: false,
+        autoplay: false,
+        autoplaySpeed: 5000
+      }).on('afterChange', () => {
+        if (player && (player.getPlayerState() == YT.PlayerState.PLAYING)) {
+          player.pauseVideo();
+        }
+        $('.main-slider').slick("slickPlay");
+      });
+      $('.slider-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        asNavFor: '.main-slider',
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true,
+        prevArrow: $('.prev-button'),
+        nextArrow: $('.next-button'),
+        responsive: [
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true
+            }
+          }
+        ]
+      });
+    });
+    // The API calls this function when the player's state changes.
+    // The function indicates that when pausing a video,
+    // the slider should show the next slides (set autoplay),
+    // and when playing a video, the slider should stop (unset autoplay).
+    function onPlayerStateChange(e) {
+      switch (e.data) {
+      case YT.PlayerState.PAUSED:
+        $(".main-slider").slick("slickPlay");
+        break;
+      case YT.PlayerState.PLAYING:
+        $(".main-slider").slick("slickPause");
+        break;
+      }
+    }
+  </script>
+{{ end }}
+

@@ -49,6 +49,6 @@
     <!-- Slick -->
     <script type="text/javascript" src={{"plugins/slick/slick.js" | absURL }}></script>
     <!-- Custom JS -->
-    <script type="text/javascript" src={{"js/script.js" | absURL }}></script>
+    {{ block "script" . }} {{/* No default script */}} {{end}}
   </body>
 </html>
