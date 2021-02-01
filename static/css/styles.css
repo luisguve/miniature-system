@@ -98,8 +98,12 @@ span.coming-soon {
   color: lightgray;
 }
 
-.lords-of-exile .gif {
-  
+.content a, a.lightblue {
+  color: lightblue;
+}
+
+.content a:hover, a.lightblue:hover {
+  color: cyan;
 }
 
 .a-btn {

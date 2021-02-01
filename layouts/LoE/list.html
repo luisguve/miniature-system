@@ -2,7 +2,7 @@
   <main aria-role="main" class="text-light loe-container">
     <header class="d-flex justify-content-center align-items-center">
     </header>
-    <div class="content container my-4">
+    <div class="container my-4">
       <div class="row justify-content-center">
         <div class="col-12">
           <h1 class="d-flex align-items-center justify-content-center mt-3 mb-4">{{.Params.Title}}{{if not .Params.launched}}<span class="ms-2 coming-soon">coming soon</span>{{end}}</h1>
@@ -38,7 +38,7 @@
         <div class="col-12 col-md-9 px-0 mt-4">
           <a href="{{.Params.wishlistLink}}"><img src="{{.Params.wishlistPic}}" class="img-fluid"></a>
         </div>
-        <div class="col-12 col-md-10 my-5">
+        <div class="col-12 col-md-10 my-5 content">
           <h2>Story</h2>
           {{ .Params.story | safeHTML }}
           {{ range .Params.features }}
@@ -71,7 +71,7 @@
           <h1 class="text-center mb-3 mb-md-5">Reviews and comments</h1>
           <div class="row justify-content-between">
           {{ range .Params.reviews }}
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-xl-4 mb-2">
               <div class="card text-dark">
                 <div class="card-header">
                   Review
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-md-10 bg-dark">
                   <div class="card-body">
-                    <h5 class="card-title"><a href="{{.Permalink}}">{{.Title}}</a></h5>
+                    <h5 class="card-title"><a href="{{.Permalink}}" class="lightblue">{{.Title}}</a></h5>
                     <p class="card-text">{{.Params.description}}</p>
                     <p class="card-text"><small class="text-muted">{{.PublishDate.Format "January 2, 2006"}}</small></p>
                   </div>
