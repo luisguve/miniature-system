@@ -41,21 +41,24 @@
 {{ end }}
 
 {{ define "FurtherReading" }}
+  {{/* Check whether to go forward */}}
   {{ if .goNext }}
+    {{/* Check whether there is a next post. */}}
     {{ if .ctx.NextInSection }}
 
       {{ if eq .ctx.NextInSection.Title .postInSameCategory }}
         {{ template "FurtherReading" (dict "ctx" .ctx.NextInSection "postInSameCategory" .postInSameCategory "goNext" true) }}
       {{ else }}
-        <h4 class="text-center mt-3">More on our <a href="/lords-of-exile/#latest-posts" class="lightblue">Blog</a></h4>
+        <h4 class="text-center mt-3 mt-lg-0">More in our <a href="/lords-of-exile/#latest-posts" class="lightblue">Blog</a></h4>
         {{ template "FurtherReadingContent" .ctx.NextInSection }}
       {{ end }}
-
     {{ else if .ctx.PrevInSection }}
-      {{ if or (eq .ctx.PrevInSection.Title .postInSameCategory) (ne .ctx.PrevInSection.Title .Title) }}
-        {{ template "FurtherReading" (dict "ctx" .ctx.PrevInSection "postInSameCategory" .postInSameCategory "goNext" false) }}
+      {{/* There is not a next post, but there is a previous post */}}
+      {{/*  */}}
+      {{ if ((eq .ctx.PrevInSection.Title .postInSameCategory) | or (ne .ctx.PrevInSection.Title .ctx.Title)) }}
+        {{ template "FurtherReading" (dict "ctx" .ctx "postInSameCategory" .postInSameCategory "goNext" false) }}
       {{ else }}
-        <h4 class="text-center mt-3">More on our <a href="/lords-of-exile/#latest-posts" class="lightblue">Blog</a></h4>
+        <h4 class="text-center mt-3 mt-lg-0">More in our <a href="/lords-of-exile/#latest-posts" class="lightblue">Blog</a></h4>
         {{ template "FurtherReadingContent" .ctx.PrevInSection }}
       {{ end }}
 
@@ -63,7 +66,7 @@
   {{ else }}
     {{if .ctx.PrevInSection }}
 
-      <h4 class="text-center mt-3">More on our <a href="/lords-of-exile/#latest-posts" class="lightblue">Blog</a></h4>
+      <h4 class="text-center mt-3 mt-lg-0">More in our <a href="/lords-of-exile/#latest-posts" class="lightblue">Blog</a></h4>
       {{ template "FurtherReadingContent" .ctx.PrevInSection }}
 
     {{ end }}
@@ -71,7 +74,7 @@
 {{ end }}
 
 {{ define "FurtherReadingContent" }}
-  <div class="card mb-3 bg-transparent border-light">
+  <div class="card mb-3 bg-transparent blogpage-border rounded-0">
     <div class="row g-0 align-items-center">
       <div class="col-md-2 col-lg-12">
         {{$ctx := .}}
