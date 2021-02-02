@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="col-12 col-md-9 px-0 mt-4">
-          <a href="{{.Params.wishlistLink}}"><img src="{{.Params.wishlistPic}}" class="img-fluid"></a>
+          <a href="{{.Params.wishlistLink}}"><img src="{{.Params.wishlistPic}}" class="img-fluid wishlist"></a>
         </div>
         <div class="col-12 col-md-10 my-5 content">
           <h2>Story</h2>
@@ -115,6 +115,7 @@
 
 {{ define "script" }}
   <script>
+    {{ if .Params.youtube }}
     // This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
 
@@ -131,6 +132,7 @@
         }
       });
     }
+    {{ end }}
     $(document).ready(function() {
       // Setup slick slider.
       $('.main-slider').slick({
