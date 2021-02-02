@@ -1,17 +1,92 @@
 {{ define "title" }}
-  {{ .Title }} &ndash; {{ .Site.Title }}
+  {{ .Site.Title }} &ndash; {{ .Title }}
 {{ end }}
 
 {{ define "main" }}
-  <main aria-role="main">
+  <main aria-role="main" class="text-light loe-post-container">
     <header class="header">
-      <h1>{{.Title}}</h1>
-      {{ with .Params.subtitle }}
-      <span class="subtitle">{{.}}</span>
-      {{ end }}
     </header>
-    <div class="content">
-      <p>LoE</p>
-    </div>
+    <section class="blog top">
+      <div class="container">
+        <div class="row my-2 my-md-4">
+          <div class="col-12 col-lg-9">
+            <div class="row">
+              <div class="col-12 col-md-5 col-lg-4 text-left text-md-right">
+                <h1 class="responsiveh1 pt-md-2">{{ .Title }}</h1>
+                <small class="text-muted d-block mb-1">{{.PublishDate.Format "January 2, 2006"}}</small>
+                <p class="mt-1 mt-md-3">{{ .Params.description }}</p>
+              </div>
+              <div class="col-12 col-md-7 col-lg-8 text-center">
+                <div class="text-center blogpage-border">
+                  <img class="p-3 pb-0 img-fluid" src="{{.Params.thumbnail}}" alt="thumbnail">
+                  <small class="text-muted pb-1 d-block">{{.Params.thumbnailDesc}}</small>
+                </div>
+              </div>
+            </div>
+            <hr class="mb-2" />
+            <div class="row">
+              <div class="col-12">
+                {{ .Content }}
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 mt-5 mt-lg-0">
+            {{- $postInSameCategory := "" -}}
+            {{- template "FurtherReading" (dict "ctx" . "postInSameCategory" $postInSameCategory "goNext" true ) -}}
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+{{ end }}
+
+{{ define "FurtherReading" }}
+  {{ if .goNext }}
+    {{ if .ctx.NextInSection }}
+
+      {{ if eq .ctx.NextInSection.Title .postInSameCategory }}
+        {{ template "FurtherReading" (dict "ctx" .ctx.NextInSection "postInSameCategory" .postInSameCategory "goNext" true) }}
+      {{ else }}
+        <h4 class="text-center mt-3">More on our <a href="/lords-of-exile/#latest-posts" class="lightblue">Blog</a></h4>
+        {{ template "FurtherReadingContent" .ctx.NextInSection }}
+      {{ end }}
+
+    {{ else if .ctx.PrevInSection }}
+      {{ if or (eq .ctx.PrevInSection.Title .postInSameCategory) (ne .ctx.PrevInSection.Title .Title) }}
+        {{ template "FurtherReading" (dict "ctx" .ctx.PrevInSection "postInSameCategory" .postInSameCategory "goNext" false) }}
+      {{ else }}
+        <h4 class="text-center mt-3">More on our <a href="/lords-of-exile/#latest-posts" class="lightblue">Blog</a></h4>
+        {{ template "FurtherReadingContent" .ctx.PrevInSection }}
+      {{ end }}
+
+    {{ end }}
+  {{ else }}
+    {{if .ctx.PrevInSection }}
+
+      <h4 class="text-center mt-3">More on our <a href="/lords-of-exile/#latest-posts" class="lightblue">Blog</a></h4>
+      {{ template "FurtherReadingContent" .ctx.PrevInSection }}
+
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ define "FurtherReadingContent" }}
+  <div class="card mb-3 bg-transparent border-light">
+    <div class="row g-0 align-items-center">
+      <div class="col-md-2 col-lg-12">
+        {{$ctx := .}}
+        {{ with .Resources.GetMatch (printf "%s" .Params.thumbnail) }}
+          {{ $image := .Resize "582x421" }}
+          <img class="img-fluid" src="{{$image.RelPermalink}}" alt="thumbnail">
+        {{ end }}
+      </div>
+      <div class="col-md-10 col-lg-12 bg-dark">
+        <div class="card-body">
+          <h5 class="card-title"><a href="{{.Permalink}}" class="lightblue">{{.Title}}</a></h5>
+          <p class="card-text">{{.Params.description}}</p>
+          <p class="card-text"><small class="text-muted">{{.PublishDate.Format "January 2, 2006"}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
 {{ end }}
