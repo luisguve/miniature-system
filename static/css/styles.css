@@ -160,6 +160,10 @@ a.view-more {
   opacity: 0.5;
 }
 
+img.wishlist:hover {
+  opacity: 0.5;
+}
+
 .feature:nth-child(even) {
   flex-direction: row;
 }
