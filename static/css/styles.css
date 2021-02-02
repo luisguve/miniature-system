@@ -129,6 +129,17 @@ a.view-more {
   background-position: center top;
 }
 
+.loe-post-container header {
+  height: 33vw;
+  background: url(/img/lords_of_exile/galagar-1024x341.png);
+  background-size: cover;
+  background-position: center top;
+}
+
+.blogpage-border {
+  border: 1px solid rgba(239, 239, 245, 0.3);
+}
+
 .iframe-container {
   position: relative;
   width: 100%;
