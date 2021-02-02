@@ -18,8 +18,10 @@
               </div>
               <div class="col-12 col-md-7 col-lg-8 text-center">
                 <div class="text-center blogpage-border">
-                  <img class="p-3 pb-0 img-fluid" src="{{.Params.thumbnail}}" alt="thumbnail">
-                  <small class="text-muted pb-1 d-block">{{.Params.thumbnailDesc}}</small>
+                  {{ with .Resources.GetMatch "thumbnail" }}
+                    <img class="p-3 pb-0 img-fluid" src="{{.RelPermalink}}" alt="{{.Params.alt}}">
+                    <small class="text-muted pb-1 d-block">{{.Params.alt}}</small>
+                  {{ end }}
                 </div>
               </div>
             </div>
@@ -78,9 +80,9 @@
     <div class="row g-0 align-items-center">
       <div class="col-md-2 col-lg-12">
         {{$ctx := .}}
-        {{ with .Resources.GetMatch (printf "%s" .Params.thumbnail) }}
+        {{ with .Resources.GetMatch "thumbnail" }}
           {{ $image := .Resize "582x421" }}
-          <img class="img-fluid" src="{{$image.RelPermalink}}" alt="thumbnail">
+          <img class="img-fluid" src="{{$image.RelPermalink}}" alt="{{.Params.alt}}">
         {{ end }}
       </div>
       <div class="col-md-10 col-lg-12 bg-dark">
