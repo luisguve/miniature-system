@@ -1,3 +1,7 @@
+{{ define "title" }}
+  {{ .Site.Title }} &ndash; {{ .Params.Title }}
+{{ end }}
+
 {{ define "main" }}
   <main aria-role="main" class="text-light loe-container">
     <header class="d-flex justify-content-center align-items-center">
@@ -89,12 +93,16 @@
         </div>
         <div class="col-12 col-md-10 mb-5">
           {{ if gt .Pages 0 }}
-            <h1 class="text-center mb-3 mb-md-5">Latest posts</h1>
+            <h1 class="text-center mb-3 mb-md-5" id="latest-posts">Latest posts</h1>
             {{ range .Pages }}
             <div class="card mb-3 bg-transparent border-light">
-              <div class="row g-0 align-items-center">
-                <div class="col-md-2">
-                  <img src="{{.Params.thumbnail}}" alt="thumbnail" class="img-fluid">
+              <div class="row g-0">
+                <div class="col-md-2 d-flex align-items-center justify-content-center">
+                  {{$ctx := .}}
+                  {{ with .Resources.GetMatch (printf "%s" .Params.thumbnail) }}
+                    {{ $image := .Resize "582x421" }}
+                    <img class="img-fluid" src="{{$image.RelPermalink}}" alt="thumbnail">
+                  {{ end }}
                 </div>
                 <div class="col-md-10 bg-dark">
                   <div class="card-body">
