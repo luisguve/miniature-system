@@ -42,8 +42,8 @@
               {{ if $posts }}
               <div class="col-12 col-lg-5 my-4 my-md-0">
                   <h2 class="text-center">Latest posts</h2>
-                  {{ range where (where .Site.Pages "Section" "lords-of-exile") ".IsSection" "!=" true }}
-                    <a class="lightblue" href="{{.Permalink}}">{{.Title}} - {{.PublishDate.Format "January 2, 2006"}}</a>
+                  {{ range first 6 (where (where .Site.Pages "Section" "lords-of-exile") ".IsSection" "!=" true) }}
+                    <a class="lightblue d-block" href="{{.Permalink}}">{{.Title}} - {{.PublishDate.Format "January 2, 2006"}}</a>
                   {{ end }}
               </div>
               {{ end }}
