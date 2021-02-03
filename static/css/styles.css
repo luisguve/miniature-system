@@ -33,6 +33,10 @@ body {
   background: transparent;
 }
 
+.navbar a.active img {
+  width: 20px;
+}
+
 .homepage-header {
   min-height: 50vh;
   /*background: linear-gradient(var(--home-header-color-1), var(--home-header-color-2));*/
