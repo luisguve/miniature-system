@@ -99,8 +99,7 @@
               <div class="row g-0">
                 <div class="col-md-2 d-flex align-items-center justify-content-center">
                   {{ with .Resources.GetMatch "thumbnail" }}
-                    {{ $image := .Resize "582x421" }}
-                    <img class="img-fluid" src="{{$image.RelPermalink}}" alt="{{.Params.alt}}">
+                    <img class="img-fluid" src="{{.RelPermalink}}" alt="{{.Params.alt}}">
                   {{ end }}
                 </div>
                 <div class="col-md-10 bg-dark">

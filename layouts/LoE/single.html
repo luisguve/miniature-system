@@ -81,8 +81,7 @@
       <div class="col-md-2 col-lg-12">
         {{$ctx := .}}
         {{ with .Resources.GetMatch "thumbnail" }}
-          {{ $image := .Resize "582x421" }}
-          <img class="img-fluid" src="{{$image.RelPermalink}}" alt="{{.Params.alt}}">
+          <img class="img-fluid" src="{{.RelPermalink}}" alt="{{.Params.alt}}">
         {{ end }}
       </div>
       <div class="col-md-10 col-lg-12 bg-dark">
