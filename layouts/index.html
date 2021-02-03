@@ -4,8 +4,8 @@
 
 {{ define "main" }}
   <main aria-role="main">
-    <header class="homepage-header d-flex flex-column flex-md-row">
-      <div class="box left-box h-25vh">
+    <header class="homepage-header row m-0 justify-content-center">
+      <div class="box col-md-6 p-0 left-box h-25vh">
         <h1 class="fs-1 text-uppercase">{{.Title}}</h1>
         {{ with .Params.subtitle }}
         <span class="subtitle">{{.}}</span>
@@ -15,7 +15,7 @@
           <a href="https://discordapp.com/invite/xb26HZD" target="_blank" link="noreferrer">Discord</a>
         </div>
       </div>
-      <div class="box right-box h-25vh p-3">
+      <div class="box col-md-6 col-xl-4 p-3 right-box h-25vh d-md-flex">
         <a class="twitter-timeline"
           href="https://twitter.com/CZAzuaga?ref_src=twsrc%5Etfw"
           data-height="450"

@@ -37,12 +37,6 @@ body {
   width: 20px;
 }
 
-.homepage-header {
-  min-height: 50vh;
-  /*background: linear-gradient(var(--home-header-color-1), var(--home-header-color-2));*/
-  background: var(--home-header-color);
-}
-
 .homepage-header .left-box {
   color: #eee;
   background-color: rgba(0,0,0,0.3);
@@ -50,12 +44,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  clip-path: polygon(
-    0 0, /* left top */
-    100% 0, /* right top */ 
-    100% 100%, /* right bottom */
-    0 calc(100% - 3vw) /* left bottom */
-  );
 }
 
 .homepage-header .box {
@@ -70,6 +58,10 @@ body {
   background: #000;
   border: 5px solid white;
   padding: 3px;
+}
+
+.homepage-header .right-box {
+  background: rgba(0,0,0,0.8);
 }
 
 .homepage-header .links a {
@@ -193,19 +185,25 @@ img.wishlist:hover {
   .homepage-header {
     min-height: 50vh;
   }
-  .homepage-header .left-box {
-    clip-path: polygon(
-      0 0, /* left top */
-      100% 0, /* right top */ 
-      calc(100% - 3vh) 100%, /* right bottom */
-      0 100% /* left bottom */
-    );
-  }
   .homepage-header .box {
-    width: 50%;
     min-height: auto;
+  }
+  #twitter-widget-0 {
+    height: 100%;
   }
   .feature:nth-child(even) {
     flex-direction: row-reverse;
+  }
+  .homepage-header .left-box {
+    color: #eee;
+    background: none;
+  }
+  .homepage-header {
+    min-height: 50vh;
+    background-color: rgba(0,0,0,0.3);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0) 50%), url("/img/8_bit_game.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
