@@ -10,11 +10,11 @@ slides:
   - screenshot: "/img/lords_of_exile/screenshots/screenshot_1.png"
   - screenshot: "/img/lords_of_exile/screenshots/screenshot_2.png"
   - screenshot: "/img/lords_of_exile/screenshots/screenshot_3.png"
-  - screenshot: "/img/lords_of_exile/enemies/boss-2.png"
+  - screenshot: "/img/lords_of_exile/enemies/boss-2.webp"
   - screenshot: "/img/lords_of_exile/screenshots/screenshot_4.png"
   - screenshot: "/img/lords_of_exile/gifs/sample-2.gif"
   - screenshot: "/img/lords_of_exile/screenshots/screenshot_5.png"
-  - screenshot: "/img/lords_of_exile/enemies/boss-1.png"
+  - screenshot: "/img/lords_of_exile/enemies/boss-1.webp"
   - screenshot: "/img/lords_of_exile/gifs/sample-3.gif"
 wishlistLink: "https://store.steampowered.com/app/1329360/Lords_of_Exile/"
 wishlistPic: "/img/lords_of_exile/wishlist.png"
@@ -22,7 +22,7 @@ story: "<p>In the Far East, in bloody ancient times of war, creatures of the dar
 features:
   - title: "A hostile and dangerous world"
     screenshots:
-      - "/img/lords_of_exile/enemies/miniboss-1.png"
+      - "/img/lords_of_exile/enemies/miniboss-1.webp"
     desc: "Survive the cruelty of a dark land dominated by the fearsome creatures of the shadows.<br />You must make your way through hordes of enemies, traps, and dangers while facing the powerful servants of Galagar at the end of each zone, in order to reach the heart of Exilia and be able to consummate your revenge."
   - title: "A tribute to the classic arcades"
     screenshots:
@@ -35,7 +35,7 @@ features:
       - "The epic 16-bit OST created with the Megadrive sound chip and anime touches will remind the great Japanese action games of the console."
   - title: "Gameplay features"
     screenshots:
-      - "/img/lords_of_exile/enemies/enemy.png"
+      - "/img/lords_of_exile/enemies/enemy.webp"
     items:
       - "Range the 8 full of action and dangers levels in a perfect classic linear design and defeat the powerful end-of-zone bosses."
       - "Powerful throwing weapons and melee combat, jump and vertical attack, climb through some areas, dashing to dodge the enemy attacks or collect valuable items in the purest arcade style are some of the Gabriel abilities."
