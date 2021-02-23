@@ -120,7 +120,7 @@ a.view-more {
 
 .loe-container header {
   height: 55vw;
-  background: url(/img/lords_of_exile/cover.png);
+  background: url(/img/lords_of_exile/cover.webp);
   background-size: cover;
   background-position: center top;
 }
