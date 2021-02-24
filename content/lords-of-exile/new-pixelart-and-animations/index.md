@@ -2,7 +2,7 @@
 title: "New Pixelart and Animations"
 date: 2021-02-02T17:08:04-04:30
 description: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-draft: true
+draft: false
 type: LoE
 resources:
   - name: "thumbnail"
